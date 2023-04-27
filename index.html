@@ -1,0 +1,416 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalyst AI | Slack to OpenAI Integration Solution</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+</head>
+
+<body class="font-sans bg-white text-gray-900">
+<!-- Header -->
+<header id="header" class="fixed top-0 z-50 w-full bg-opacity-60 backdrop-blur-md">
+    <div class="container mx-auto px-4 py-3 md:px-8 md:py-4">
+        <nav class="flex items-center justify-between">
+            <!-- Logo and Company Name -->
+            <a href="#top" class="flex items-center font-bold text-xl">
+                <span class="text-indigo-600 text-2xl">🚀</span> Catalyst AI
+            </a>
+
+
+                <!-- Hamburger Menu (Visible on small screens) -->
+                <button class="md:hidden flex items-center" id="hamburger-button">
+                    <svg viewBox="0 0 20 20" fill="currentColor" class="menu w-6 h-6">
+                        <path fill-rule="evenodd"
+                            d="M2 4a1 1 0 011-1h14a1 1 0 110 2H3a1 1 0 01-1-1zm0 6a1 1 0 011-1h14a1 1 0 110 2H3a1 1 0 01-1-1zm1 5a1 1 0 100 2h14a1 1 0 100-2H3z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+
+                <!-- Navigation Menu -->
+                <ul class="hidden md:flex items-center space-x-6" id="main-menu">
+                    <li><a href="#product-features" class="text-gray-700 hover:text-gray-900 font-bold">ℹ️ About</a></li>
+                    <li><a href="#pricing" class="text-gray-700 hover:text-gray-900 font-bold">💰 Pricing</a></li>
+                    <li><a href="#faqs" class="text-gray-700 hover:text-gray-900 font-bold">❓ FAQs</a></li>
+                    <li><a href="contact.html" class="text-gray-700 hover:text-gray-900 font-bold"> 📞 Contact</a></li>
+                </ul>
+
+                <!-- CTA Button -->
+                
+                <div class="flex justify-end">
+
+                    <!-- CTA Button -->
+                    <a href="contact.html"
+                        class="hidden md:inline-block text-white bg-indigo-600 hover:bg-indigo-700 py-2 px-4 rounded-full shadow-lg">
+                        Get Started
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <!-- Mobile Menu -->
+        <ul class="hidden space-y-4 bg-white p-4 border-t border-gray-200" id="mobile-menu">
+            <li><a href="#about" class="block text-gray-700 hover:text-gray-900 font-bold">ℹ️ About</a></li>
+            <li><a href="#pricing" class="block text-gray-700 hover:text-gray-900 font-bold">💰 Pricing</a></li>
+            <li><a href="#faqs" class="block text-gray-700 hover:text-gray-900 font-bold">❓ FAQs</a></li>
+            <li><a href="contact.html" class="block text-gray-700 hover:text-gray-900 font-bold">📞 Contact</a></li>
+        </ul>
+    </header>
+    <!-- Hero Block -->
+    <section class="min-h-screen text-gray-900 pt-2">
+        <div class="container mx-auto px-4 h-full">
+            <div class="h-full flex items-center justify-center">
+                <div class="grid items-center grid-cols-1 gap-12 w-full lg:grid-cols-2">
+                    <!-- Heading and Product Description -->
+                    <div>
+                        <h1 class="text-4xl md:text-6xl font-bold text-indigo-600">Launch Your Business Into a New Era</h1>
+                        <p class="text-lg md:text-xl mt-6 mb-8">
+                            Introducing Catalyst AI, a customizable AI assistant that integrates seamlessly into your Slack 
+							environment. Invite the assistant into your team Slack channels and configure its settings based 
+							on your team's needs and goals.
+                        </p>
+                    <div></div>
+
+                        <!-- CTA Buttons -->
+                        <div class="mt-8">
+                            <a href="contact.html"
+                                class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700">
+                                Request a Free Demo
+                            </a>
+
+                        </div>
+                    </div>
+                    <!-- Product Visual -->
+                    <div>
+                        <img src="img/10068.jpg" alt="Product Visual" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Product Demo -->
+<section id="video" class="bg-gradient-to-r from-indigo-500 to-indigo-700 py-10 sm:py-16 lg:py-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-white">Experience Our Platform in Action</h2>
+            <p class="mt-4 text-lg md:text-xl text-white">Get a hands-on feel for our AI-powered business chat co-pilot</p>
+            <div class="flex items-center justify-center">
+                <img class="w-full md:w-4/5 lg:w-3/4 xl:w-2/3 rounded-lg shadow-lg" src="img/example-3.gif" alt="Example GIF">
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <a href="contact.html"
+                class="bg-white text-indigo-600 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-100">
+                Try It for Free
+            </a>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Problem Agitation -->
+    <section id="problem-agitation" class="py-10 sm:py-16 lg:py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Empower Your Business with AI</h2>
+                <p class="mt-4 text-lg md:text-xl text-gray-700">Modern business challenges demand innovative solutions powered by our AI-driven Slack bot</p>
+            </div>
+            <div class="grid gap-8 lg:grid-cols-3">
+                <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-900">🤝 Collaborative Adoption</h3>
+                    <p class="mt-4 text-gray-700">Teams unite to learn and adopt our cutting-edge AI technology, enhancing cohesion and driving shared success.</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-900">✍️ Ideation and Content Creation</h3>
+                    <p class="mt-4 text-gray-700">Our AI bot fuels creativity, streamlining content generation and inspiring fresh ideas to elevate your business strategies.</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-900">💡 Untapped Potential</h3>
+                    <p class="mt-4 text-gray-700">Without AI assistance, your team might miss opportunities to innovate and optimize. Our bot unlocks new possibilities, propelling your business to new heights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- High-level Solution -->
+<section id="high-level-solution" class="bg-white py-1">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-gray-900">
+        
+        <div class="w-auto h-auto mx-auto bg-gray-100 p-6 rounded-lg shadow-md">
+		<div class="text-center mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold">Supercharge any <span class="text-indigo-600">Slack Channel</span> in Minutes</h2>
+        </div>
+		<!-- Zack Kass Section -->
+		<div class="grid items-center grid-cols-1 gap-12 w-full lg:grid-cols-2">
+                    <!-- Heading and Product Description -->
+                    <div>
+                        <h1 class="text-4xl md:text-4xl font-semibold text-indigo-600">“Putting ChatGPT inside Slack adds another layer of leverage where conversations happen faster, threads get explained faster and work just gets done more efficiently.”</h1>
+                        <p class="text-lg md:text-xl mt-6 mb-8">
+                            <b>Zack Kass</b><br>
+							Head of GTM, OpenAI
+                        </p>
+                    <div></div>
+
+                        <!-- CTA Buttons -->
+                        <div class="mt-8">
+                            <a href="contact.html"
+                                class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700">
+                                Request a Free Demo
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Product Visual -->
+                    <div>
+                        <img src="img/zack.jfif" alt="Product Visual" class="w-full h-auto">
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <div class="relative h-36">
+    </div>
+</section>
+  
+<!-- Social Proof 1 -->
+<section id="social-proof-1" class="bg-gray-100 py-10 sm:py-16 lg:py-6">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-gray-900">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold">Maximize the <span class="text-indigo-600">Potential</span> of Your Business</h2>
+            <p class="mt-4 text-xl">No matter your industry—IT, Finance, Marketing, Healthcare, Insurance, Logistics, Cybersecurity, or Education—or your teams—HR, Legal, Project Managers, Sales, Coders, Content Writers, or Educators—our OpenAI-Slack Integration will streamline processes and amplify your team's abilities.</p>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="text-center">
+                <img src="img/collaborativegrowth.png" alt="Successful Startups" class="w-32 mx-auto mb-4">
+                <h3 class="text-xl md:text-2xl font-bold mb-4">Collaborative Growth</h3>
+                <p>Introducing AI into business chat unites power users and novices, fostering a dynamic environment where shared learning elevates the entire team's abilities.</p>
+            </div>
+            <div class="text-center">
+                <img src="img/computerpeople.png" alt="Expertise" class="w-32 mx-auto mb-4">
+                <h3 class="text-xl md:text-2xl font-bold mb-4">AI Amplified Creativity</h3>
+                <p>AI in Slack acts as a powerful creative tool that can help users overcome the blank page problem, enabling them to generate new ideas and unlock their true potential in various professional fields.</p>
+            </div>
+            <div class="text-center">
+                <img src="img/evolutionofman.png" alt="Teamwork" class="w-32 mx-auto mb-4">
+                <h3 class="text-xl md:text-2xl font-bold mb-4">Early Adoption is Key</h3>
+                <p>The gains in certain tasks are measured in factors (2x-4x) rather than margins (2%-4%). By acting swiftly, organizations can stay ahead of their rivals and secure an unassailable market position.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Product Features -->
+<section id="product-features" class="bg-white py-10 sm:py-16 lg:py-24">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-gray-900">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold">Professional Productivity <span class="text-indigo-600">Power-Up</span></h2>
+            <p class="mt-4 text-xl">New MIT Research Shows Spectacular Increase In White Collar Productivity</p>
+        </div>
+        <div class="grid gap-8 max-w-6xl mx-auto space-y-8">
+            <!-- Feature 1 -->
+            <div class="grid gap-6 sm:grid-cols-2 items-center justify-center">
+                <div class="text-center sm:text-left">
+                    <h3 class="text-xl md:text-2xl font-bold mb-4">AI-Powered Chat Boosts Productivity and Quality</h3>
+                    <p>MIT's recent study showcases the remarkable impact of AI-Powered Chat on mid-level professional writing tasks. With 444 professionals completing writing tasks, half using AI-Powered Chat, the results revealed a 37% reduction in time spent and a 45% improvement in output quality.</p>
+                   <a href="https://economics.mit.edu/sites/default/files/inline-files/Noy_Zhang_1.pdf"target="_blank"> <button class="bg-indigo-600 text-white px-6 py-2 rounded-md mt-6">Read More</button></a>
+                </div>
+                <div>
+                    <img src="img/Robot giving light bulb to businessman.jpg" alt="Feature 1 Visual" class="w-full h-auto mx-auto">
+                </div>
+            </div>
+            <!-- Feature 2 -->
+            <div class="grid gap-6 sm:grid-cols-2 items-center justify-center">
+                <div>
+                    <img src="img/Scientists studying neural connections.jpg" alt="Feature 2 Visual" class="w-full h-auto mx-auto">
+                </div>
+                <div class="text-center sm:text-left">
+                    <h3 class="text-xl md:text-2xl font-bold mb-4">Closing Productivity Gaps with AI-Powered Support</h3>
+                    <p>AI-Powered Business Chat benefits workers across skill levels, particularly those at the lower end, by narrowing the productivity gap. Instead of replacing humans, AI-Powered Business Chat supports them in idea generation and editing, leading to higher job satisfaction and confidence. The study also highlights AI-Powered Business Chat's potential to enhance productivity in various fields, such as marketing and grant writing, by automating routine aspects of writing tasks.</p>
+                    <a href="https://economics.mit.edu/sites/default/files/inline-files/Noy_Zhang_1.pdf"target="_blank"> <button class="bg-indigo-600 text-white px-6 py-2 rounded-md mt-6">Read More</button></a>
+                </div>
+            </div>
+            <!-- Feature 3 -->
+            <div class="grid gap-6 sm:grid-cols-2 items-center justify-center">
+                <div class="text-center sm:text-left">
+                    <h3 class="text-xl md:text-2xl font-bold mb-4">Enhancing Skills for All Levels</h3>
+                    <p>AI-Chat helps both "bad writers" improve and "good writers" work faster, with users expressing willingness to pay a monthly fee equivalent to 0.5% of their salary for access to the tool.</p>
+                    <a href="https://economics.mit.edu/sites/default/files/inline-files/Noy_Zhang_1.pdf" target="_blank"> <button class="bg-indigo-600 text-white px-6 py-2 rounded-md mt-6">Read More</button></a>
+                </div>
+                <div>
+                    <img src="img/Tiny man chatting online with AI assistant (1).jpg" alt="Feature 3 Visual" class="w-full h-auto mx-auto">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Offer Section -->
+<section id="offer">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="w-full max-w-5xl mx-auto bg-indigo-600 text-white p-6 rounded-lg shadow-md">
+        <div class="text-center">
+          <h2 class="text-3xl md:text-4xl font-bold">🚀 Discover the Benefits of Catalyst AI Across Job Roles</span></h2>
+          <p class="mt-4 text-xl">Unlock productivity and enhance communication with Catalyst AI! 💯</p>
+          
+          <div class="mt-8">
+            <h3 class="text-2xl font-bold mb-2">Why choose Catalyst AI?</h3>
+            <ul class="list-none pl-0">
+              <li class="mb-2">📝 Writing Assistance for all positions: Improve writing quality, simplify text, and save time on documents, emails, and more.</li>
+              <li class="mb-2">📊 Business Analysts, IT Professionals: Get quick, accurate solutions for coding Excel VBA scripts and optimizing spreadsheets.</li>
+              <li class="mb-2">🐤 Rubber Ducking for Programmers, Designers: Refine and debug code with an interactive tool that helps you think through problems.</li>
+              <li class="mb-2">🌐 Language Translation for Multilingual Teams: Break language barriers and enhance global collaboration with real-time translations.</li>
+			  <li class="mb-2">✍️ Content Generation for Digital Marketers: Accelerate content production, optimize SEO, and create compelling social media content.</li>
+              <li class="mb-2">🗣️ Email & Communication Guidance for All: Craft clear and polite messages, ensuring successful communication and avoiding misunderstandings.</li>
+            </ul>
+          </div>
+  
+          <!-- CTA Button -->
+          <div class="text-center mt-8">
+            <a href="contact.html" class="bg-white text-indigo-600 font-bold py-2 px-4 rounded focus:outline-none">Get Started Now 🎉</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+    <!-- Social Proof 2 -->
+    <section id="social-proof-2">
+        <!-- Your social proof 2 code here -->
+    </section>
+
+ <!-- FAQs Section -->
+<section id="faqs" class="py-10 sm:py-16 lg:py-24 bg-gray-100">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-gray-900">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold">Frequently Asked <span class="text-indigo-600">Questions</span></h2>
+        <p class="text-xl mt-4">We've answered some common questions for you.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="text-xl font-bold mb-2">How does the Slack/OpenAI integration work?</h3>
+          <p>Our customizable AI assistant seamlessly connects to your Slack workspace, enabling your teams to access AI's powerful capabilities directly within channels, boosting productivity and saving time.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-2">What are the benefits of integrating your Slack workspace with our tool?</h3>
+          <p>Experience improved collaboration, communication, content generation, task assistance, and optimized problem-solving – all within the familiar Slack interface.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-2">How can you improve communication and productivity within our team on Slack?</h3>
+          <p>ChatGPT drafts messages, provides quick answers, generates content like summaries or reports, and assists in brainstorming sessions, all within the context of your Slack conversations.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-2">Are there any specific industries or roles that benefit most from this integration?</h3>
+          <p>Marketing, sales, customer support, software development, project management, and more benefit from this integration – any team that values efficient communication and collaboration.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-2">How can I set up the Slack/OpenAI integration for my team?</h3>
+          <p>Setting up the integration is easy – invite our bot, set the system message, and watch your teams collaborate to find innovative uses for this powerful tool within your Slack workspace.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-2">What are the costs associated with the Slack/OpenAI integration?</h3>
+          <p>As an agile startup, we offer pricing designed to accommodate businesses of all sizes, with a variety of plans tailored to your organization's needs.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-2">How secure is the data shared between Slack and OpenAI?</h3>
+          <p>We adhere to strict data privacy standards, encrypting and protecting all shared information. Only messages mentioning our bot are transmitted to OpenAI.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-2">Can I customize the integration to suit my team's specific needs within Slack?</h3>
+          <p>Absolutely! The integration can be tailored to fit your team's requirements, providing customized responses for your unique use cases.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-2">What level of support is available for this in case of issues or questions?</h3>
+          <p>We provide comprehensive support for our products and access to our responsive support team, ensuring a smooth experience for your organization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+<!-- Final Action Section -->
+<section id="final-action" class="py-10 sm:py-16 lg:py-24 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-gray-900">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-bold">Ready to <span class="text-indigo-600">Elevate Your Business Chat</span> and Supercharge Your Company? 🚀</h2>
+        <p class="text-xl mt-4">Join now and let's build the future together!</p>
+        
+        <div class="mt-8">
+          <a href="contact.html" class="inline-block px-6 py-3 text-xl font-bold text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out rounded-md">
+            Request a Free Demo
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<!-- Footer Section -->
+<footer class="bg-indigo-600 py-10">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-gray-100">
+      <div class="flex flex-wrap justify-between items-center">
+        <div class="w-full sm:w-auto mb-6 sm:mb-0">
+          <h3 class="text-2xl font-bold text-white mb-4">🚀 Catalyst AI</h3>
+          <p>&copy; 2023 Catalyst AI. All rights reserved. Artwork by @pch.vector</p>
+    </div>
+    </div>
+    </div>
+  </footer>
+  
+  
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburgerButton = document.getElementById('hamburger-button');
+    const mainMenu = document.getElementById('main-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburgerButton.addEventListener('click', function () {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    const step1Title = document.getElementById("step1-title");
+    const step2Title = document.getElementById("step2-title");
+    const step3Title = document.getElementById("step3-title");
+    const step1Content = document.getElementById("step1-content");
+    const step2Content = document.getElementById("step2-content");
+    const step3Content = document.getElementById("step3-content");
+    const step1Image = document.getElementById("step1-image");
+    const step2Image = document.getElementById("step2-image");
+    const step3Image = document.getElementById("step3-image");
+
+    function hideAllContent() {
+        step1Content.classList.add("hidden");
+        step2Content.classList.add("hidden");
+        step3Content.classList.add("hidden");
+        step1Image.classList.add("hidden");
+        step2Image.classList.add("hidden");
+        step3Image.classList.add("hidden");
+    }
+
+    step1Title.addEventListener("click", function () {
+        hideAllContent();
+        step1Content.classList.remove("hidden");
+        step1Image.classList.remove("hidden");
+    });
+
+    step2Title.addEventListener("click", function () {
+        hideAllContent();
+        step2Content.classList.remove("hidden");
+        step2Image.classList.remove("hidden");
+    });
+
+    step3Title.addEventListener("click", function () {
+        hideAllContent();
+        step3Content.classList.remove("hidden");
+        step3Image.classList.remove("hidden");
+    });
+
+    // Show step1 content and image on page load
+    step1Content.classList.remove("hidden");
+    step1Image.classList.remove("hidden");
+});
+
+</script>
+
+</html>
