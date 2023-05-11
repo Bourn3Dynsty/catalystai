@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Email Verification</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>Email Verification</h1>
+        <div id="message">Verifying...</div>
+
+        <script>
+            $(document).ready(function() {
+                // Parse verification code from URL
+                const urlParams = new URLSearchParams(window.location.search);
+                const code = urlParams.get('code');
+
+                if (!code) {
+                    $('#message').text('Invalid verification code.');
+                    return;
+                }
+
+                // Send verification code to verify API endpoint
+                $.ajax({
+                    url: 'https://0cq1x89zl9.execute-api.us-east-1.amazonaws.com/Prod/verify',
+                    type: 'POST',
+                    data: JSON.stringify({ verification_code: code }),
+                    contentType: 'application/json; charset=utf-8',
+                    success: function(response) {
+                        $('#message').text('Successfully verified email.');
+                    },
+                    error: function() {
+                        $('#message').text('Failed to verify email.');
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

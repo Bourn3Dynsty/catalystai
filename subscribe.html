@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Subscribe Form</h2>
+
+<form id="subscribeForm">
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" value="yourname@example.com"><br>
+  <button type="submit">Submit</button>
+</form> 
+
+<script>
+document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+  event.preventDefault();  // Prevent the form from being submitted normally
+  var email = document.getElementById('email').value;
+
+  // Make an AJAX POST request
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'https://0cq1x89zl9.execute-api.us-east-1.amazonaws.com/Prod/subscribe', true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      alert('Success: ' + xhr.responseText);
+    } else {
+      alert('Request failed.  Returned status of ' + xhr.status);
+    }
+  };
+  xhr.send(JSON.stringify({ email: email }));
+});
+</script>
+
+</body>
+</html>
