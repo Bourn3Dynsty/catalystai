@@ -19,15 +19,6 @@
     <meta name="twitter:description" content="Catalyst AI offers a customizable AI assistant that integrates seamlessly into your Slack environment, elevating your team's productivity and performance.">
     <meta name="twitter:image" content="https://www.catalystsai.com/img/twitter-image.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4515FMLWPX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-4515FMLWPX');
-</script>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
 </head>
 
@@ -367,6 +358,20 @@
       </div>
     </div>
   </section>
+
+  <!-- Simple Subscribe subscription form begins -->
+<div class="form-container">
+    <p>Enter your email below to subscribe.</p>
+    <div class="form-row" id="subscribe">
+        <!-- Change the below 'action' to your API subscribe endpoint -->
+        <form action="https://d6hgych63h.execute-api.us-east-1.amazonaws.com/SUBSCRIBE" method="get">
+            <label hidden for="email">Enter your email to subscribe</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email" required>
+            <button type="submit" class="primary" value="Subscribe">Subscribe</button>
+        </form>
+    </div>
+</div>
+<!-- Subscription form ends -->
   
 <!-- Footer Section -->
 <footer class="bg-indigo-600 py-10">
