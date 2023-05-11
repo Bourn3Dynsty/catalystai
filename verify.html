@@ -21,17 +21,16 @@
 
                 // Send verification code to verify API endpoint
                 $.ajax({
-                    url: 'https://0cq1x89zl9.execute-api.us-east-1.amazonaws.com/Prod/verify',
-                    type: 'POST',
-                    data: JSON.stringify({ verification_code: code }),
-                    contentType: 'application/json; charset=utf-8',
-                    success: function(response) {
-                        $('#message').text('Successfully verified email.');
-                    },
-                    error: function() {
-                        $('#message').text('Failed to verify email.');
-                    }
-                });
+                url: `https://0cq1x89zl9.execute-api.us-east-1.amazonaws.com/Prod/verify?code=${code}`,
+                type: 'GET',
+                contentType: 'application/json; charset=utf-8',
+                success: function(response) {
+                    $('#message').text('Successfully verified email.');
+                },
+                error: function() {
+                    $('#message').text('Failed to verify email.');
+                }
+            });
             });
         </script>
     </body>
